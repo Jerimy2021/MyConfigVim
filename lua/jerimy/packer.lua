@@ -103,4 +103,6 @@ use { 'nvim-lualine/lualine.nvim' }
 use { 'junegunn/rainbow_parentheses.vim' }
 -- Transparent
 use { 'tribela/vim-transparent'}
+-- vim fugitive
+use { 'tpope/vim-fugitive' }
 end)
