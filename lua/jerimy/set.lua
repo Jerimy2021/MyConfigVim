@@ -23,7 +23,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 --color scheme
-vim.cmd.colorscheme("slate")
+vim.cmd.colorscheme("habamax")
 
 
 --configurando un archivo cpp como un archivo de c++

@@ -84,6 +84,7 @@ requires = {
 	end
 }
 use { "ellisonleao/gruvbox.nvim" }
+use { "folke/tokyonight.nvim" }
 -- Sniprun
 use { 'michaelb/sniprun'}
 -- DAP
