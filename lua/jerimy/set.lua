@@ -4,7 +4,7 @@ vim.opt.guicursor = ""
 
 -- numeros relativos
 vim.opt.nu = true
-vim.opt.relativenumber = true
+vim.opt.relativenumber = false
 
 -- copiar al portapapeles del os
 vim.opt.clipboard = "unnamedplus"
@@ -23,7 +23,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 --color scheme
-vim.cmd.colorscheme("habamax")
+vim.cmd.colorscheme("slate")
 
 
 --configurando un archivo cpp como un archivo de c++

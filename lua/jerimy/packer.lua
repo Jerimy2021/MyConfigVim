@@ -106,4 +106,9 @@ use { 'junegunn/rainbow_parentheses.vim' }
 use { 'tribela/vim-transparent'}
 -- vim fugitive
 use { 'tpope/vim-fugitive' }
+-- vim kiyoon
+use { 'kiyoon/jupynium.nvim',  run = "pip3 install --user ."}
+use { 'rcarriga/nvim-notify' }
+use { 'stevearc/dressing.nvim' }
+use { 'nvim-neotest/nvim-nio' }
 end)

@@ -54,5 +54,6 @@ vim.keymap.set("n", "<leader>ce", ":!./%<CR>")
 vim.keymap.set("n", "<leader>cl", ":!rm %<CR>")
 -- Compilar y ejecutar
 vim.keymap.set("n", "<leader>c", ":!g++ % -o % && ./%<CR>")
--- abrir terminal
-vim.keymap.set("n", "<leader>t", ":terminal<CR>")
+-- abrir terminal de la mitad para abajo
+vim.keymap.set("n", "<leader>tt", ":below terminal<CR>")
+
