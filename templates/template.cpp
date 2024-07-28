@@ -87,19 +87,6 @@ typedef complex<double> point_m;
 #define MIN(x,y) (x) = min(x,y)
 #define flash ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
 
-struct point {
-	double x, y;
-	point() {}
-	point(double x, double y) : x(x), y(y) {}
-	point operator+(const point &p) const { return point(x + p.x, y + p.y); }
-	point operator-(const point &p) const { return point(x - p.x, y - p.y); }
-	point operator*(double c) const { return point(x * c, y * c); }
-	point operator/(double c) const { return point(x / c, y / c); }
-	double distance(const point &p) const { return hypot(x - p.x, y - p.y); }
-
-};
-
-
 
 int main() {
 
