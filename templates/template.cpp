@@ -68,6 +68,7 @@ typedef pair<ll, ll> pll;
 typedef vector<int> vi;
 typedef vector<ll> vll;
 typedef vector<pii> vpii;
+typedef complex<double> point_m;
 #define MOD_P 1000000007
 #define REP(i,a,b) for (ll i = a; i < b; i++)
 #define REPD(i,a,b) for (ll i = a; i > b; i--)
@@ -84,144 +85,19 @@ typedef vector<pii> vpii;
 #define SZ(x) (int)x.size()
 #define MAX(x,y) (x) = max(x,y)
 #define MIN(x,y) (x) = min(x,y)
+#define flash ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
 
+struct point {
+	double x, y;
+	point() {}
+	point(double x, double y) : x(x), y(y) {}
+	point operator+(const point &p) const { return point(x + p.x, y + p.y); }
+	point operator-(const point &p) const { return point(x - p.x, y - p.y); }
+	point operator*(double c) const { return point(x * c, y * c); }
+	point operator/(double c) const { return point(x / c, y / c); }
+	double distance(const point &p) const { return hypot(x - p.x, y - p.y); }
 
-struct edge {
-	int u, v;
-	int weight;
-	edge (int _u, int _v, int _w) {
-		u =_u;
-		v = _v;
-		weight = _w;
-	};
 };
-
-bool edge_comp(const edge &a, edge &b) {
-	return a.weight < b.weight;
-}
-
-void show_graph(vector<edge> edges) {
-    REP(i,0,SZ(edges)) {
-        cout << edges[i].u << " -- " << edges[i].v << " peso :" << edges[i].weight << endl;
-    }
-}
-struct union_find
-{
-    vector<int> parent;
-    vector<int> rank;
-    union_find(int n)
-    {
-        parent.resize(n);
-        rank.resize(n);
-        REP(i,0,n)
-        {
-            parent[i] = i;
-            rank[i] = 0;
-        }
-    }
-    int find(int x)
-    {
-        if (parent[x] == x)
-            return x;
-        return parent[x] = find(parent[x]);
-    }
-    void unite(int x, int y)
-    {
-        x = find(x);
-        y = find(y);
-        if (x == y)
-            return;
-        if (rank[x] < rank[y])
-            parent[x] = y;
-        else
-        {
-            parent[y] = x;
-            if (rank[x] == rank[y])
-                rank[x]++;
-        }
-    }
-};
-
-vector<edge>  mst(ll n,vector<edge> edges)
-{
-    union_find uf(n);
-    sort(edges.begin(), edges.end(), edge_comp);
-    vector<edge> mst;
-    REP(i,0,SZ(edges))
-    {
-        int u = edges[i].u;
-        int v = edges[i].v;
-        if (uf.find(u) != uf.find(v))
-        {
-            uf.unite(u, v);
-            mst.push_back(edges[i]);
-        }
-    }
-    if (mst.size() != n - 1) {
-        return vector<edge>();
-    }
-    return mst;
-}
-
-//dijkstra
-vector<int> dijkstra(int n, vector<vector<pii>> &adj, int s)
-{
-    vector<int> dist(n, 1e9);
-    dist[s] = 0;
-    priority_queue<pii, vector<pii>, greater<pii>> pq;
-    pq.push({0, s});
-    while (!pq.empty())
-    {
-	int u = pq.top().second;
-	int d = pq.top().first;
-	pq.pop();
-	if (d > dist[u])
-	    continue;
-	for (auto &e : adj[u])
-	{
-	    int v = e.first;
-	    int w = e.second;
-	    if (dist[u] + w < dist[v])
-	    {
-		dist[v] = dist[u] + w;
-		pq.push({dist[v], v});
-	    }
-	}
-    }
-    return dist;
-}
-
-//bellman-ford
-vector<int> bellman_ford(int n, vector<edge> &edges, int s)
-{
-    vector<int> dist(n, 1e9);
-    dist[s] = 0;
-    REP(i, 0, n - 1)
-    {
-	for (auto &e : edges)
-	{
-	    if (dist[e.u] + e.weight < dist[e.v])
-		dist[e.v] = dist[e.u] + e.weight;
-	}
-    }
-    return dist;
-}
-
-//floyd-warshall
-vector<vector<int>> floyd_warshall(int n, vector<edge> &edges)
-{
-    vector<vector<int>> dist(n, vector<int>(n, 1e9));
-    REP(i, 0, n)
-    dist[i][i] = 0;
-    for (auto &e : edges)
-    dist[e.u][e.v] = e.weight;
-    REP(k, 0, n)
-    REP(i, 0, n)
-    REP(j, 0, n)
-    dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j]);
-    return dist;
-}
-
 
 
 

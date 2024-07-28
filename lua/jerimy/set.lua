@@ -23,7 +23,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 --color scheme
-vim.cmd.colorscheme("slate")
+vim.cmd.colorscheme("tokyonight-moon")
 
 
 --configurando un archivo cpp como un archivo de c++
@@ -38,10 +38,10 @@ for _, ft_path in ipairs(vim.api.nvim_get_runtime_file("lua/jerimy/configs/*.lua
     loadfile(ft_path)(ft)
 end
 
-
 --Compilar un archivo de c++ con f5
 vim.api.nvim_set_keymap('n', '<F5>', ':w<CR>:make<CR>', {noremap = true, silent = true})
 vim.api.nvim_command('set makeprg=g++\\ -o\\ %:r\\ -std=c++20\\ %')
+
 
 
 

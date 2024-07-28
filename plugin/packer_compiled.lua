@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/pierre/.cache/nvim/packer_hererocks/2.1.1703358377/share/lua/5.1/?.lua;/Users/pierre/.cache/nvim/packer_hererocks/2.1.1703358377/share/lua/5.1/?/init.lua;/Users/pierre/.cache/nvim/packer_hererocks/2.1.1703358377/lib/luarocks/rocks-5.1/?.lua;/Users/pierre/.cache/nvim/packer_hererocks/2.1.1703358377/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/pierre/.cache/nvim/packer_hererocks/2.1.1703358377/lib/lua/5.1/?.so"
+local package_path_str = "/Users/pierre/.cache/nvim/packer_hererocks/2.1.1716656478/share/lua/5.1/?.lua;/Users/pierre/.cache/nvim/packer_hererocks/2.1.1716656478/share/lua/5.1/?/init.lua;/Users/pierre/.cache/nvim/packer_hererocks/2.1.1716656478/lib/luarocks/rocks-5.1/?.lua;/Users/pierre/.cache/nvim/packer_hererocks/2.1.1716656478/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/pierre/.cache/nvim/packer_hererocks/2.1.1716656478/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/Users/pierre/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  catppuccin = {
+    loaded = true,
+    path = "/Users/pierre/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["cmp-dap"] = {
     loaded = true,
     path = "/Users/pierre/.local/share/nvim/site/pack/packer/start/cmp-dap",
@@ -90,7 +95,7 @@ _G.packer_plugins = {
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
   ["competitest.nvim"] = {
-    config = { "\27LJ\2\nl\0\1\5\0\3\0\b'\1\0\0\18\2\0\0&\1\2\0016\2\1\0009\2\2\2\18\4\1\0B\2\2\1K\0\1\0\bcmd\bvimA!/Users/pierre/.config/nvim/templates/duplicate_cpp_to_py.shþ\a\1\0\6\0*\0/6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\14\0005\3\3\0005\4\5\0005\5\4\0=\5\6\0045\5\a\0=\5\b\0045\5\t\0=\5\n\0045\5\v\0=\5\f\4=\4\r\3=\3\15\0025\3\16\0005\4\18\0005\5\17\0=\5\19\0045\5\20\0=\5\21\4=\4\22\3=\3\23\0025\3\24\0005\4\25\0005\5\26\0=\5\27\0045\5\28\0=\5\29\0045\5\30\0=\5\31\0045\5 \0=\5!\0045\5\"\0=\5#\0045\5$\0=\5\n\4=\4\r\3=\3%\0025\3&\0=\3'\0023\3(\0=\3)\2B\0\2\1K\0\1\0\24receive_cpp_problem\0\18template_file\1\0\2\apy)~/.config/nvim/templates/template.py\bcpp*~/.config/nvim/templates/template.cpp\14runner_ui\1\3\0\0\6q\6Q\16toggle_diff\1\3\0\0\6d\6D\16view_stderr\1\3\0\0\6e\6E\16view_stdout\1\3\0\0\6o\6O\16view_output\1\3\0\0\6a\6A\15view_input\1\3\0\0\6i\6I\1\0\4\14run_again\6R\rkill_all\n<C-k>\18run_all_again\n<C-r>\tkill\6K\1\0\3\nwidth\4³æÌ™\3³æŒÿ\3\vheight\4³æÌ™\3³æŒÿ\3\14interface\npopup\14editor_ui\25normal_mode_mappings\vcancel\1\3\0\0\6q\6Q\18switch_window\1\0\1\19save_and_close\n<C-s>\1\4\0\0\n<C-h>\n<C-l>\n<C-i>\1\0\4\16popup_width\4³æÌ™\3³æŒÿ\3\17popup_height\4š³æÌ\t™³¦ÿ\3\fshow_nu\2\rshow_rnu\2\14picker_ui\1\0\4 evaluate_template_modifiers\2\30floating_border_highlight\16FloatBorder\29received_files_extension\bcpp\16date_format\r%Y-%m-%d\rmappings\vsubmit\1\2\0\0\t<cr>\nclose\1\5\0\0\n<esc>\n<C-c>\6q\6Q\15focus_prev\1\4\0\0\6k\t<up>\f<S-Tab>\15focus_next\1\0\0\1\4\0\0\6j\v<down>\n<Tab>\1\0\2\nwidth\4\0€€€ÿ\3\vheight\4³æÌ™\3³æŒÿ\3\nsetup\16competitest\frequire\0" },
+    config = { "\27LJ\2\nž\f\0\0\6\0006\0?6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\14\0005\3\3\0005\4\5\0005\5\4\0=\5\6\0045\5\a\0=\5\b\0045\5\t\0=\5\n\0045\5\v\0=\5\f\4=\4\r\3=\3\15\0025\3\16\0005\4\18\0005\5\17\0=\5\19\0045\5\20\0=\5\21\4=\4\22\3=\3\23\0025\3\24\0005\4\25\0005\5\26\0=\5\27\0045\5\28\0=\5\29\0045\5\30\0=\5\31\0045\5 \0=\5!\0045\5\"\0=\5#\0045\5$\0=\5\n\4=\4\r\3=\3%\0025\3&\0=\3'\0025\3+\0005\4(\0005\5)\0=\5*\4=\4,\0035\4-\0005\5.\0=\5*\4=\4/\3=\0030\0025\0032\0005\0041\0=\4,\0035\0043\0005\0054\0=\5*\4=\4/\3=\0035\2B\0\2\1K\0\1\0\16run_command\1\2\0\0\r$(FNAME)\1\0\2\texec\21some_interpreter\targs\0\1\0\2\14some_lang\0\bcpp\0\1\0\1\texec\16./$(FNOEXT)\20compile_command\14some_lang\1\2\0\0\r$(FNAME)\1\0\2\texec\18some_compiler\targs\0\bcpp\1\0\2\14some_lang\0\bcpp\0\targs\1\6\0\0\15-std=c++17\a-g\r$(FNAME)\a-o\14$(FNOEXT)\1\0\2\texec\bg++\targs\0\18template_file\1\0\2\apy)~/.config/nvim/templates/template.py\bcpp*~/.config/nvim/templates/template.cpp\14runner_ui\1\3\0\0\6q\6Q\16toggle_diff\1\3\0\0\6d\6D\16view_stderr\1\3\0\0\6e\6E\16view_stdout\1\3\0\0\6o\6O\16view_output\1\3\0\0\6a\6A\15view_input\1\3\0\0\6i\6I\1\0\n\tkill\6K\18run_all_again\n<C-r>\rkill_all\n<C-k>\14run_again\6R\15view_input\0\16view_output\0\16view_stdout\0\16view_stderr\0\16toggle_diff\0\nclose\0\1\0\4\nwidth\4³æÌ™\3³æŒÿ\3\vheight\4³æÌ™\3³æŒÿ\3\rmappings\0\14interface\npopup\14editor_ui\25normal_mode_mappings\vcancel\1\3\0\0\6q\6Q\18switch_window\1\0\3\vcancel\0\19save_and_close\n<C-s>\18switch_window\0\1\4\0\0\n<C-h>\n<C-l>\n<C-i>\1\0\5\17popup_height\4š³æÌ\t™³¦ÿ\3\16popup_width\4³æÌ™\3³æŒÿ\3\rshow_rnu\2\fshow_nu\2\25normal_mode_mappings\0\14picker_ui\1\0\n\18template_file\0\14editor_ui\0\16date_format\r%Y-%m-%d evaluate_template_modifiers\2\29received_files_extension\bcpp\20compile_command\0\30floating_border_highlight\16FloatBorder\14picker_ui\0\16run_command\0\14runner_ui\0\rmappings\vsubmit\1\2\0\0\t<cr>\nclose\1\5\0\0\n<esc>\n<C-c>\6q\6Q\15focus_prev\1\4\0\0\6k\t<up>\f<S-Tab>\15focus_next\1\0\4\15focus_next\0\vsubmit\0\15focus_prev\0\nclose\0\1\4\0\0\6j\v<down>\n<Tab>\1\0\3\nwidth\4\0€€€ÿ\3\rmappings\0\vheight\4³æÌ™\3³æŒÿ\3\nsetup\16competitest\frequire\0" },
     loaded = true,
     path = "/Users/pierre/.local/share/nvim/site/pack/packer/start/competitest.nvim",
     url = "https://github.com/xeluxee/competitest.nvim"
@@ -115,10 +120,10 @@ _G.packer_plugins = {
     path = "/Users/pierre/.local/share/nvim/site/pack/packer/start/hydra.nvim",
     url = "https://github.com/anuvyklack/hydra.nvim"
   },
-  ["jupynium.nvim"] = {
+  ["indentpython.vim"] = {
     loaded = true,
-    path = "/Users/pierre/.local/share/nvim/site/pack/packer/start/jupynium.nvim",
-    url = "https://github.com/kiyoon/jupynium.nvim"
+    path = "/Users/pierre/.local/share/nvim/site/pack/packer/start/indentpython.vim",
+    url = "https://github.com/vim-scripts/indentpython.vim"
   },
   ["lsp-zero.nvim"] = {
     loaded = true,
@@ -240,22 +245,22 @@ _G.packer_plugins = {
     path = "/Users/pierre/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
+  ["vim-lldb"] = {
+    loaded = true,
+    path = "/Users/pierre/.local/share/nvim/site/pack/packer/start/vim-lldb",
+    url = "https://github.com/gilligan/vim-lldb"
+  },
   ["vim-prettier"] = {
     loaded = true,
     path = "/Users/pierre/.local/share/nvim/site/pack/packer/start/vim-prettier",
     url = "https://github.com/prettier/vim-prettier"
-  },
-  ["vim-transparent"] = {
-    loaded = true,
-    path = "/Users/pierre/.local/share/nvim/site/pack/packer/start/vim-transparent",
-    url = "https://github.com/tribela/vim-transparent"
   }
 }
 
 time([[Defining packer_plugins]], false)
 -- Config for: competitest.nvim
 time([[Config for competitest.nvim]], true)
-try_loadstring("\27LJ\2\nl\0\1\5\0\3\0\b'\1\0\0\18\2\0\0&\1\2\0016\2\1\0009\2\2\2\18\4\1\0B\2\2\1K\0\1\0\bcmd\bvimA!/Users/pierre/.config/nvim/templates/duplicate_cpp_to_py.shþ\a\1\0\6\0*\0/6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\14\0005\3\3\0005\4\5\0005\5\4\0=\5\6\0045\5\a\0=\5\b\0045\5\t\0=\5\n\0045\5\v\0=\5\f\4=\4\r\3=\3\15\0025\3\16\0005\4\18\0005\5\17\0=\5\19\0045\5\20\0=\5\21\4=\4\22\3=\3\23\0025\3\24\0005\4\25\0005\5\26\0=\5\27\0045\5\28\0=\5\29\0045\5\30\0=\5\31\0045\5 \0=\5!\0045\5\"\0=\5#\0045\5$\0=\5\n\4=\4\r\3=\3%\0025\3&\0=\3'\0023\3(\0=\3)\2B\0\2\1K\0\1\0\24receive_cpp_problem\0\18template_file\1\0\2\apy)~/.config/nvim/templates/template.py\bcpp*~/.config/nvim/templates/template.cpp\14runner_ui\1\3\0\0\6q\6Q\16toggle_diff\1\3\0\0\6d\6D\16view_stderr\1\3\0\0\6e\6E\16view_stdout\1\3\0\0\6o\6O\16view_output\1\3\0\0\6a\6A\15view_input\1\3\0\0\6i\6I\1\0\4\14run_again\6R\rkill_all\n<C-k>\18run_all_again\n<C-r>\tkill\6K\1\0\3\nwidth\4³æÌ™\3³æŒÿ\3\vheight\4³æÌ™\3³æŒÿ\3\14interface\npopup\14editor_ui\25normal_mode_mappings\vcancel\1\3\0\0\6q\6Q\18switch_window\1\0\1\19save_and_close\n<C-s>\1\4\0\0\n<C-h>\n<C-l>\n<C-i>\1\0\4\16popup_width\4³æÌ™\3³æŒÿ\3\17popup_height\4š³æÌ\t™³¦ÿ\3\fshow_nu\2\rshow_rnu\2\14picker_ui\1\0\4 evaluate_template_modifiers\2\30floating_border_highlight\16FloatBorder\29received_files_extension\bcpp\16date_format\r%Y-%m-%d\rmappings\vsubmit\1\2\0\0\t<cr>\nclose\1\5\0\0\n<esc>\n<C-c>\6q\6Q\15focus_prev\1\4\0\0\6k\t<up>\f<S-Tab>\15focus_next\1\0\0\1\4\0\0\6j\v<down>\n<Tab>\1\0\2\nwidth\4\0€€€ÿ\3\vheight\4³æÌ™\3³æŒÿ\3\nsetup\16competitest\frequire\0", "config", "competitest.nvim")
+try_loadstring("\27LJ\2\nž\f\0\0\6\0006\0?6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\14\0005\3\3\0005\4\5\0005\5\4\0=\5\6\0045\5\a\0=\5\b\0045\5\t\0=\5\n\0045\5\v\0=\5\f\4=\4\r\3=\3\15\0025\3\16\0005\4\18\0005\5\17\0=\5\19\0045\5\20\0=\5\21\4=\4\22\3=\3\23\0025\3\24\0005\4\25\0005\5\26\0=\5\27\0045\5\28\0=\5\29\0045\5\30\0=\5\31\0045\5 \0=\5!\0045\5\"\0=\5#\0045\5$\0=\5\n\4=\4\r\3=\3%\0025\3&\0=\3'\0025\3+\0005\4(\0005\5)\0=\5*\4=\4,\0035\4-\0005\5.\0=\5*\4=\4/\3=\0030\0025\0032\0005\0041\0=\4,\0035\0043\0005\0054\0=\5*\4=\4/\3=\0035\2B\0\2\1K\0\1\0\16run_command\1\2\0\0\r$(FNAME)\1\0\2\texec\21some_interpreter\targs\0\1\0\2\14some_lang\0\bcpp\0\1\0\1\texec\16./$(FNOEXT)\20compile_command\14some_lang\1\2\0\0\r$(FNAME)\1\0\2\texec\18some_compiler\targs\0\bcpp\1\0\2\14some_lang\0\bcpp\0\targs\1\6\0\0\15-std=c++17\a-g\r$(FNAME)\a-o\14$(FNOEXT)\1\0\2\texec\bg++\targs\0\18template_file\1\0\2\apy)~/.config/nvim/templates/template.py\bcpp*~/.config/nvim/templates/template.cpp\14runner_ui\1\3\0\0\6q\6Q\16toggle_diff\1\3\0\0\6d\6D\16view_stderr\1\3\0\0\6e\6E\16view_stdout\1\3\0\0\6o\6O\16view_output\1\3\0\0\6a\6A\15view_input\1\3\0\0\6i\6I\1\0\n\tkill\6K\18run_all_again\n<C-r>\rkill_all\n<C-k>\14run_again\6R\15view_input\0\16view_output\0\16view_stdout\0\16view_stderr\0\16toggle_diff\0\nclose\0\1\0\4\nwidth\4³æÌ™\3³æŒÿ\3\vheight\4³æÌ™\3³æŒÿ\3\rmappings\0\14interface\npopup\14editor_ui\25normal_mode_mappings\vcancel\1\3\0\0\6q\6Q\18switch_window\1\0\3\vcancel\0\19save_and_close\n<C-s>\18switch_window\0\1\4\0\0\n<C-h>\n<C-l>\n<C-i>\1\0\5\17popup_height\4š³æÌ\t™³¦ÿ\3\16popup_width\4³æÌ™\3³æŒÿ\3\rshow_rnu\2\fshow_nu\2\25normal_mode_mappings\0\14picker_ui\1\0\n\18template_file\0\14editor_ui\0\16date_format\r%Y-%m-%d evaluate_template_modifiers\2\29received_files_extension\bcpp\20compile_command\0\30floating_border_highlight\16FloatBorder\14picker_ui\0\16run_command\0\14runner_ui\0\rmappings\vsubmit\1\2\0\0\t<cr>\nclose\1\5\0\0\n<esc>\n<C-c>\6q\6Q\15focus_prev\1\4\0\0\6k\t<up>\f<S-Tab>\15focus_next\1\0\4\15focus_next\0\vsubmit\0\15focus_prev\0\nclose\0\1\4\0\0\6j\v<down>\n<Tab>\1\0\3\nwidth\4\0€€€ÿ\3\rmappings\0\vheight\4³æÌ™\3³æŒÿ\3\nsetup\16competitest\frequire\0", "config", "competitest.nvim")
 time([[Config for competitest.nvim]], false)
 
 _G._packer.inside_compile = false

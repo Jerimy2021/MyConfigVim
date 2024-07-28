@@ -76,10 +76,14 @@ requires = {
 			received_files_extension = "cpp",
 			evaluate_template_modifiers = true,
 			date_format = '%Y-%m-%d',
-			receive_cpp_problem = function(file_path)
-				local command = "!/Users/pierre/.config/nvim/templates/duplicate_cpp_to_py.sh"  .. file_path
-				vim.cmd(command)
-			end,
+			compile_command = {
+				cpp       = { exec = 'g++',           args = { '-std=c++17','-g','$(FNAME)', '-o', '$(FNOEXT)'} },
+				some_lang = { exec = 'some_compiler', args = {'$(FNAME)'} },
+			},
+				run_command = {
+				cpp       = { exec = './$(FNOEXT)' },
+				some_lang = { exec = 'some_interpreter', args = {'$(FNAME)'} },
+			},
 		})
 	end
 }
@@ -89,8 +93,7 @@ use { "folke/tokyonight.nvim" }
 use { 'michaelb/sniprun'}
 -- DAP
 use { 'MunifTanjim/nui.nvim' }
-use {'mfussenegger/nvim-dap'}
-use {'rcarriga/nvim-dap-ui'}
+use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
 use {'theHamsta/nvim-dap-virtual-text'}
 use { 'jay-babu/mason-nvim-dap.nvim' }
 use { 'anuvyklack/hydra.nvim' }
@@ -100,15 +103,18 @@ use { 'rcarriga/cmp-dap' }
 use { 'nvim-tree/nvim-tree.lua' }
 use { 'kyazdani42/nvim-web-devicons' }
 use { 'nvim-lualine/lualine.nvim' }
+
 -- Parentheses Rainbow
 use { 'junegunn/rainbow_parentheses.vim' }
--- Transparent
-use { 'tribela/vim-transparent'}
 -- vim fugitive
 use { 'tpope/vim-fugitive' }
 -- vim kiyoon
-use { 'kiyoon/jupynium.nvim',  run = "pip3 install --user ."}
 use { 'rcarriga/nvim-notify' }
 use { 'stevearc/dressing.nvim' }
 use { 'nvim-neotest/nvim-nio' }
+use { 'gilligan/vim-lldb' }
+use { 'vim-scripts/indentpython.vim' }
+
+-- vim catppuccin
+use { "catppuccin/nvim", as = "catppuccin" }
 end)
