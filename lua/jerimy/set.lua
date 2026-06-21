@@ -22,9 +22,7 @@ vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
---color scheme
-vim.cmd.colorscheme("tokyonight-moon")
-
+vim.cmd("colorscheme desert")
 
 --configurando un archivo cpp como un archivo de c++
 vim.cmd([[
